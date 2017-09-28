@@ -11,7 +11,7 @@ Terdapat dua file python `.py`:
 		tulis perintah di terminal/CMD : `python getappname.py` lalu ENTER
 		![Tampilah Awal](img_exp/exp0.JPG "Tampilan Awal")
 		langsung tekan ENTER untuk menampilkan semua, atau tulis string untuk filter output,
-		berikut contoh hasil screenshot menggunakan filter : 
+	- Berikut contoh hasil screenshot menggunakan filter : 
 		![Filter Contoh Awal](img_exp/exp1.JPG "Filter Contoh Awal")
 
 2. file `getappname-table-output.py` untuk menampilkan aktifitas koneksi dan port yang digunakan dengan output dalam format tabel,
@@ -19,11 +19,15 @@ Terdapat dua file python `.py`:
 		
 		pertama, install dulu module `terminaltables` dengan perintah : `pip install terminaltables`
 		setelah itu perintah sama dengan perintah pada `getappname.py`
-
+	- Contoh screenshot menggunakan filter, output dalam format tabel : 
+		![Tampilah empat](img_exp/exp3.JPG "Tampilan empat")
+	
 ## CONTOH OUTPUT 
-1. Contoh kesatu, tampilah awal setelah perintah `python getappname.py`, langsung ENTER akan menampilkan semua, atau input string untuk filter : 
+1. Contoh keSatu, tampilah awal setelah perintah `python getappname.py`, langsung ENTER akan menampilkan semua, atau input string untuk filter : 
 ![Tampilah satu](img_exp/exp0.JPG "Tampilan satu")
-2. Contoh kedua, menggunakan filter `fire`, menampilkan aktifitas koneksi yang mengandung string `fire`: 
+2. Contoh keDua, menggunakan filter `fire`, menampilkan aktifitas koneksi yang mengandung string `fire`: 
 ![Tampilah dua](img_exp/exp1.JPG "Tampilan dua")
-3. Contoh ketiga, menggunakan filter `tele`, menampilkan aktifitas koneksi yang mengandung string `tele`: 
+3. Contoh keTiga, menggunakan filter `tele`, menampilkan aktifitas koneksi yang mengandung string `tele`: 
 ![Tampilah tiga](img_exp/exp2.JPG "Tampilan tiga")
+4. Contoh keEmpat, menggunakan filter `tele` dan filter `fire` dalam satu frame screenshot :
+![Tampilah empat](img_exp/exp3.JPG "Tampilan empat")
