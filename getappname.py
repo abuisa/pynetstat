@@ -6,10 +6,19 @@ ket= '''-------------------------------------------------
  * netstat untuk menampilkan applikasi yang sedang menggunakan port
  * hasilnya sama dengan <netstat -ab> tapi beda format output dan tidak ada waktu tunggu
  * output bisa difilter 
+
+ * Contoh 1 Filter, menampilkan yang mengandung kata 'firefox': 
+   ENTER !, atau masukkan Filter [x/X for Exit] : firefox 
+ * Contoh 2 Filter, menampilkan yang mengandung kata 'UDP': 
+   ENTER !, atau masukkan Filter [x/X for Exit] : udp 
+-------------------------------------------------
+'''
+exp='''-------------------------------------------------
  * Format Output : 
    [1]No. [2]Proto  [3]Local Address  [4]Foreign Address  [5]State  [6]PID  [7]AppName
 -------------------------------------------------
 '''
+
 
 def get_appname(pid):
 	ps = psutil.Process(int(pid))
@@ -32,31 +41,6 @@ for out_line in out_tolist:
 		w2file('NetStat.out',out_line)
 
 	
-def output_v1():
-	tmp_file = [i.strip().split() for i in open("NetStat.out")]
-	ix = 0
-	for f_line in tmp_file:
-		if f_line :
-			if f_line[0] == "TCP" or f_line[0] == "UDP":
-				ix = ix+1
-				try:
-					jum = len(f_line)	
-					s = '\t'
-					pro = f_line[0]
-					loa = f_line[1]
-					foa = f_line[2]
-					if jum == 5: sta = f_line[3]
-					else: sta = '\t\t'
-					pid = f_line[-1]
-					exe = get_appname(pid)
-					p_out = str(ix)+'.'+s+ pro +s+ sta +s+loa +s+s+  foa +s+ pid +s+ exe
-					#p_out = '\t'.join(f_line)
-					print (p_out)
-				except Exception as e:
-					print (e)
-				
-
-				
 def output_v2(str_filter):
 	no = 0
 	f = open("NetStat.out")
@@ -81,15 +65,14 @@ def output_v2(str_filter):
 				#	print(' Filter Not Found !')
 
 
-
+print(ket)
 while True:
 	try:	
-		print(ket) # beri tanda pagar jika tidak ingin tampilkan baris ini 
-		str_filter = input('\n Masukkan String untuk Filter output, [x/X for Exit] : ')
+		print(exp) # beri tanda pagar jika tidak ingin tampilkan baris ini 
+		str_filter = input('\n ENTER !, atau masukkan Filter [x/X for Exit] : ')
 		print('------------------------------------------------------------')
 		if str_filter == 'x' or str_filter == 'X':
 			exit()
-		#output_v1()
 		output_v2(str_filter)	
 	except:
 		break
