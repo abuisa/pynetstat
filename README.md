@@ -5,21 +5,22 @@ dilengkapi dengan filter yang lebih memudahkan
 
 ## KETERANGAN FILE dan HOW TO 
 Terdapat dua file python `.py`: 
-1. `getappname.py` untuk menampilkan aktifitas koneksi dan port yang digunakan, 
-	- HOW TO : 
+1. file `getappname.py` untuk menampilkan aktifitas koneksi dan port yang digunakan, 
+	- HOW TO: 
 	tulis perintah di terminal/CMD : `python getappname.py` lalu ENTER
 	![Tampilah Awal](img_exp/exp0.JPG "Tampilan Awal")
-	langsung tekan ENTER untuk menampilkan semua, atau tulis string untuk filter output
+	langsung tekan ENTER untuk menampilkan semua, atau tulis string untuk filter output,
 	berikut contoh hasil screenshot menggunakan filter : 
 	![Filter Contoh Awal](img_exp/exp1.JPG "Filter Contoh Awal")
-2. `getappname-table-output.py` untuk menampilkan aktifitas koneksi dan port yang digunakan dengan output dalam format tabel,
-	- HOW TO :
+2. file `getappname-table-output.py` untuk menampilkan aktifitas koneksi dan port yang digunakan dengan output dalam format tabel,
+	- HOW TO:
 	pertama, install dulu module `terminaltables` dengan perintah : `pip install terminaltables`
 	setelah itu perintah sama dengan perintah pada `getappname.py`
+
 ## CONTOH OUTPUT 
-	1. Contoh kesatu : 
-	![Tampilah satu](img_exp/exp0.JPG "Tampilan satu")
-	2. Contoh kedua : 
-	![Tampilah dua](img_exp/exp1.JPG "Tampilan dua")
-	3. Contoh ketiga : 
-	![Tampilah tiga](img_exp/exp2.JPG "Tampilan tiga")
+1. Contoh kesatu: 
+![Tampilah satu](img_exp/exp0.JPG "Tampilan satu")
+2. Contoh kedua: 
+![Tampilah dua](img_exp/exp1.JPG "Tampilan dua")
+3. Contoh ketiga: 
+![Tampilah tiga](img_exp/exp2.JPG "Tampilan tiga")
