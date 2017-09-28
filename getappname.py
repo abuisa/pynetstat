@@ -45,8 +45,6 @@ def output_v2(str_filter):
 	no = 0
 	f = open("NetStat.out")
 	csv_f = csv.reader(f)
-	#hdr_s = ["NO","PROTO","LOCAL_IP","FOREIGN_IP","STATE","PID","APP_NAME"]
-	#print ('\t'.join(hdr_s))
 	for row in csv_f:
 		if row:
 			row_tol = row[0].split()
