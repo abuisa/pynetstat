@@ -32,18 +32,19 @@ def w2file(fl,s):
 	except:
 		exit()
 	f.close
+def utama():
+	cmd_out = subprocess.Popen(['netstat', '-ano'], stdout=subprocess.PIPE).communicate()
+	out_tolist = list(cmd_out)
 
-cmd_out = subprocess.Popen(['netstat', '-ano'], stdout=subprocess.PIPE).communicate()
-out_tolist = list(cmd_out)
-
-for out_line in out_tolist:
-	if out_line != None:
-		out_line = out_line.decode('utf-8') # decode, untuk python 3
-		w2file('NetStat.out',out_line)
+	for out_line in out_tolist:
+		if out_line != None:
+			out_line = out_line.decode('utf-8') # decode, untuk python 3
+			w2file('NetStat.out',out_line)
 
 
 
 def output_2tabel(sf):
+	utama()
 	no = 0
 	frow =[]
 	hdr_s = ["NO","PROTO","LOCAL_IP","FOREIGN_IP","STATE","PID","APP_NAME"]
@@ -65,11 +66,7 @@ def output_2tabel(sf):
 	ltt = AsciiTable(frow)
 	print(ltt.table)
 
-
-
 		
-#output_2tabel()
-
 print(ket)
 print(exp)
 while True:

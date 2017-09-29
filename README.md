@@ -4,7 +4,7 @@ yang dieksekusi menggunakan python untuk mendapatkan format output yang sesuai d
 dilengkapi dengan filter yang lebih memudahkan
 
 ## KETERANGAN FILE dan HOW TO 
-Terdapat dua file python `.py`: 
+Terdapat 3 (tiga) file python `.py`: 
 1. file `getappname.py` untuk menampilkan aktifitas koneksi dan port yang digunakan, 
 	- HOW TO: 
 		
@@ -21,7 +21,7 @@ Terdapat dua file python `.py`:
 		setelah itu perintah sama dengan perintah pada `getappname.py`
 	- Contoh screenshot menggunakan filter, output dalam format tabel : 
 		![Tampilah empat](img_exp/exp3.JPG "Tampilan empat")
-	
+3. file `getappname-to-listver.py` = `getappname-table-output.py`, bedanya `getappname-to-listver.py` menggunakan manajement list tanpa simpan ke file.
 ## CONTOH OUTPUT 
 1. Contoh keSatu, tampilah awal setelah perintah `python getappname.py`, langsung ENTER akan menampilkan semua, atau input string untuk filter : 
 ![Tampilah satu](img_exp/exp0.JPG "Tampilan satu")
