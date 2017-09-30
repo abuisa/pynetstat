@@ -1,6 +1,5 @@
 import subprocess
 import psutil
-import csv
 from terminaltables import AsciiTable
 
 ket= '''-------------------------------------------------
