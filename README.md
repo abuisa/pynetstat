@@ -4,8 +4,8 @@ yang dieksekusi menggunakan python untuk mendapatkan format output yang sesuai d
 dilengkapi dengan filter yang lebih memudahkan
 
 ## KETERANGAN FILE dan HOW TO 
-Terdapat 3 (tiga) file python `.py`: 
-1. file `getappname.py` untuk menampilkan aktifitas koneksi dan port yang digunakan, 
+Terdapat 4 (empat) file python `.py`: 
+1.	file `getappname.py` untuk menampilkan aktifitas koneksi dan port yang digunakan, 
 	- HOW TO: 
 		
 		tulis perintah di terminal/CMD : `python getappname.py` lalu ENTER
@@ -14,15 +14,19 @@ Terdapat 3 (tiga) file python `.py`:
 	- Berikut contoh hasil screenshot menggunakan filter : 
 		![Filter Contoh Awal](img_exp/exp1.JPG "Filter Contoh Awal")
 
-2. file `getappname-table-output.py` untuk menampilkan aktifitas koneksi dan port yang digunakan dengan output dalam format tabel,
+2.	file `getappname_table_output.py` untuk menampilkan aktifitas koneksi dan port yang digunakan dengan output dalam format tabel,
 	- HOW TO:
 		
 		pertama, install dulu module `terminaltables` dengan perintah : `pip install terminaltables`
 		setelah itu perintah sama dengan perintah pada `getappname.py`
 	- Contoh screenshot menggunakan filter, output dalam format tabel : 
 		![Tampilah empat](img_exp/exp3.JPG "Tampilan empat")
-3. file `getappname-to-listver.py` = `getappname-table-output.py`, bedanya `getappname-to-listver.py` menggunakan manajement list tanpa simpan ke file.
-
+3.	file `getappname_to_listver.py` = `getappname-table-output.py`, bedanya `getappname-to-listver.py` menggunakan manajement list tanpa simpan ke file.
+4.	file `test.py` adalah file untuk test panggil fungsi yang terdapat pada file `getappname_to_listver.py` dan `getappname_table_output.py`,
+	ketika dijalankan, akan diminta memilih 1 dari 2 pilihan, `1. menampilkan tanpa DOMAIN NAME` dan, `2. menampilkan lengkap dengan DOMAIN NAME`.
+	- Contoh screenshot : 
+	![Tampilah lima](img_exp/exp41.JPG "Tampilan lima")
+	
 ## CONTOH OUTPUT 
 1. Contoh keSatu, tampilah awal setelah perintah `python getappname.py`, langsung ENTER akan menampilkan semua, atau input string untuk filter : 
 ![Tampilah satu](img_exp/exp0.JPG "Tampilan satu")
