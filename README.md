@@ -22,6 +22,7 @@ Terdapat 3 (tiga) file python `.py`:
 	- Contoh screenshot menggunakan filter, output dalam format tabel : 
 		![Tampilah empat](img_exp/exp3.JPG "Tampilan empat")
 3. file `getappname-to-listver.py` = `getappname-table-output.py`, bedanya `getappname-to-listver.py` menggunakan manajement list tanpa simpan ke file.
+
 ## CONTOH OUTPUT 
 1. Contoh keSatu, tampilah awal setelah perintah `python getappname.py`, langsung ENTER akan menampilkan semua, atau input string untuk filter : 
 ![Tampilah satu](img_exp/exp0.JPG "Tampilan satu")
@@ -31,3 +32,5 @@ Terdapat 3 (tiga) file python `.py`:
 ![Tampilah tiga](img_exp/exp2.JPG "Tampilan tiga")
 4. Contoh keEmpat, menggunakan filter `tele` dan filter `fire` dalam satu frame screenshot :
 ![Tampilah empat](img_exp/exp3.JPG "Tampilan empat")
+5. Contoh keLima, output dengan menyertakan DOMAIN NAME :
+![Tampilah lima](img_exp/exp4.JPG "Tampilan lima")
