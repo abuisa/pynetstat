@@ -44,20 +44,16 @@ def utama():
 
 def output_2tabel(sf):
 	utama()
-	no = 0
-	frow =[]
+	no = 0;frow =[]
 	hdr_s = ["NO","PROTO","LOCAL_IP","FOREIGN_IP","STATE","PID","APP_NAME"]
 	frow += [hdr_s]
 	of = [i.strip().split() for i in open("NetStat.out")]	
 	for row in of:
 		if row:			
 			if row[0].upper() == 'TCP' or row[0].upper() == 'UDP':	
-				pid = row[-1]			
-				exe = get_appname(pid)
+				pid = row[-1];exe = get_appname(pid)
 				if any(sf.upper() in el.upper() for el in row) or (sf.upper() in exe.upper()) and sf != '':
-					no = no+1
-					row.insert(0,str(no))
-					jum = len(row)
+					no = no+1;row.insert(0,str(no));jum = len(row)
 					if jum == 5: row.insert(4,' - ')
 					row.insert(6,exe)
 					frow += [row]
@@ -65,14 +61,14 @@ def output_2tabel(sf):
 	ltt = AsciiTable(frow)
 	print(ltt.table)
 
-		
-print(ket)
-print(exp)
-while True:
-	try:	
-		str_filter = input('\n ENTER, atau masukkan Filter, [x/X for Exit] : ')
-		if str_filter == 'x' or str_filter == 'X':
-			exit()
-		output_2tabel(str_filter)
-	except:
-		break
+def main():		
+	print(ket)
+	print(exp)
+	while True:
+		try:	
+			str_filter = input('\n ENTER, atau masukkan Filter, [x/X for Exit] : ')
+			if str_filter == 'x' or str_filter == 'X':
+				exit()
+			output_2tabel(str_filter)
+		except:
+			break
