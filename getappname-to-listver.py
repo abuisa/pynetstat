@@ -1,6 +1,7 @@
 import subprocess
-import psutil
+import psutil;import time;import os
 from terminaltables import AsciiTable
+
 
 ket= '''-------------------------------------------------
  * netstat untuk menampilkan applikasi yang sedang menggunakan port
@@ -19,16 +20,23 @@ exp='''-------------------------------------------------
 -------------------------------------------------
 '''
 
-
+hlp='''
+	ENTER, atau masukkan Filter, [x/X for Exit] : 
+	R	: Untuk Repeat setiap 2 detik
+'''
 def get_appname(pid):
 	ps = psutil.Process(int(pid))
 	return ps.name()
+	
+def clear_sceen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 	
 def utama(sf):
 	cmd_out = subprocess.Popen(['netstat', '-ano'], stdout=subprocess.PIPE).communicate()
 	out2list = list(cmd_out)
 	out2list = out2list[0].splitlines()
 
+	#clear_sceen()
 	listku = []
 	for row in out2list:
 		row2list = row.decode('utf-8').split()
@@ -43,11 +51,11 @@ def utama(sf):
 	for l in listku:	
 		if l:
 			if l[0].upper() == 'TCP' or l[0].upper() == 'UDP':
-				no +=1; pid = l[-1];exe = get_appname(pid)
+				pid = l[-1];exe = get_appname(pid)
 				if any(sf.upper() in el.upper() for el in l) or (sf.upper() in exe.upper()) and sf != '':
-					l.insert(0,str(no));l.insert(len(l),exe);newlistku += [l]
+					no +=1;l.insert(0,str(no));l.insert(len(l),exe);newlistku += [l]
 
-	ltt = AsciiTable(newlistku);print(ltt.table)
+	ltt = AsciiTable(newlistku);print(ltt.table) 
 
 print(ket);print(exp)
 while True:
@@ -55,6 +63,14 @@ while True:
 		srh = input('\n ENTER, atau masukkan Filter, [x/X for Exit] : ')
 		if srh == 'x' or srh == 'X':exit()
 		utama(srh)
+		if srh == 'H' or srh == 'h':
+			print(hlp)
+		if srh == 'R':
+			srh = input('\n Repea untuk Filter, [x/X for Exit] : ')
+			while True:				
+				utama(srh)
+				time.sleep(3)	
+		
 	except:
 		break
 
