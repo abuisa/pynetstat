@@ -72,3 +72,5 @@ def main():
 			output_2tabel(str_filter)
 		except:
 			break
+
+#main()			

@@ -11,7 +11,7 @@ exp='''-------------------------------------------------
 
 hlp='''
 	ENTER, atau masukkan Filter, [x/X for Exit] : 
-	R	: Untuk Repeat setiap 5 detik
+	R	: Untuk Repeat setiap 2 detik
 '''
 def get_appname(pid):
 	ps = psutil.Process(int(pid))
@@ -68,7 +68,7 @@ def main():
 				while True:				
 					utama(srh)
 					print(exp)
-					time.sleep(5)	
+					time.sleep(2)	
 			utama(srh)
 		except:
 			break
