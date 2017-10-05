@@ -5,7 +5,7 @@ import getappname_table_output as gto
 
 exp='''-------------------------------------------------
  * Format Output : 
-   [1]No. [2]Proto  [3]Local Address  [4]Foreign Address  [5]Domain Name [6]State  [7]PID  [8]AppName
+   [1]No. [2]Proto  [3]Local Address  [4]Foreign Address  [5]Host Name [6]State  [7]PID  [8]AppName
 -------------------------------------------------
 '''
 
@@ -45,7 +45,7 @@ def utama(sf):
 			listku += [row2list]
 
 	newlistku = [];no = 0	
-	newlistku += [["NO","PROTO","LOCAL_IP","FOREIGN_IP","DOMAIN_NAME","STATE","PID","APP_NAME"]]
+	newlistku += [["NO","PROTO","LOCAL_IP","FOREIGN_IP","HOST_NAME","STATE","PID","APP_NAME"]]
 	for l in listku:	
 		if l:
 			if l[0].upper() == 'TCP' or l[0].upper() == 'UDP':
